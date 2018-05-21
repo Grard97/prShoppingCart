@@ -1,0 +1,4 @@
+101;Magic Wand;bottle;3;10.0
+232;Spigha Voramar;half paint;2;12.0
+534;Yria Prima;paint;4;13.0
+334;Elf's Ambrosia;paint;5;15.0
