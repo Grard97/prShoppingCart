@@ -1,4 +1,4 @@
-package prShoppingCart;
+package prShoppingCart.src.prShoppingCart;
 
 import java.util.Scanner;
 import java.io.*;
@@ -28,7 +28,7 @@ public class ShoppingCart {
 		if (IsIn) Oarr[i].setUnits(o.getUnits());
 		else { 
 			if(numOrders == Oarr.length) System.arraycopy(Oarr, 0, Oarr, 0, Oarr.length*2);
-			Oarr[i] = o;
+			Oarr[numOrders+1] = o;
 		}
 	}
 	
@@ -41,7 +41,7 @@ public class ShoppingCart {
 			Oarr[actual].setName(sc.nextLine());
 			Oarr[actual].setBeerSize(sc.nextLine());
 			Oarr[actual].setUnits(sc.nextInt());
-			Oarr[actual].setPriceUnit(sc.nextDouble());
+			Oarr[actual].setPriceUnit(sc.nextFloat());
 		}
 	}
 	
@@ -54,7 +54,8 @@ public class ShoppingCart {
 	
 	public float getBill() {
 		float bill=0;
-		for (int i = 0; i<Oarr.length;++i) {bill += Oarr[i].getPriceUnit();}
+		for (int i = 0; i<this.numOrders;++i) {bill = bill+Oarr[i].getPriceUnit();}
+	
 		return bill;
 	}
 	

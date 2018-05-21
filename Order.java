@@ -1,4 +1,4 @@
-package prShoppingCart;
+package prShoppingCart.src.prShoppingCart;
 
 public class Order {
 
@@ -6,10 +6,10 @@ public class Order {
 	private String name;
 	private String size;
 	private int units;
-	private double priceUnit;
+	protected float priceUnit;
 	
 	
-	public Order(int barCode, String name, String size, int units, double priceUnit) throws ShoppingCartException{
+	public Order(int barCode, String name, String size, int units, float priceUnit) throws ShoppingCartException{
 		
 		this.barCode = barCode;
 		this.name = name;
@@ -45,8 +45,8 @@ public class Order {
 		else throw new ShoppingCartException("ERROR: wrong size");}	
 	public int getUnits() {return this.units;}
 	public void setUnits(int units) {this.units = units;}
-	public double getPriceUnit() {return this.priceUnit;}
-	public void setPriceUnit(double priceUnit) {this.priceUnit = priceUnit;} 
+	public float getPriceUnit() {return this.priceUnit;}
+	public void setPriceUnit(float priceUnit) {this.priceUnit = priceUnit;} 
 
 	public String toString() {
 		return this.barCode+";"+this.name+";"+this.size+";"+this.units+";"+this.priceUnit;

@@ -1,4 +1,4 @@
-package prShoppingCart;
+package prShoppingCart.src.prShoppingCart;
 
 public class testOrder {
 

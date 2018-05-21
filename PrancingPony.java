@@ -1,4 +1,4 @@
-package prShoppingCart;
+package prShoppingCart.src.prShoppingCart;
 import java.io.FileNotFoundException;
 import java.util.*;
 import prShoppingCart.*;
